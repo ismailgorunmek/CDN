@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+      <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  <title>Uygulama Yönlendirme</title>
+  <script>
+    window.onload = function() {
+      const userAgent = navigator.userAgent.toLowerCase();
+      
+      const androidLink = "https://play.google.com/store/apps/details?id=com.npistanbul.mobileapp"; 
+      const iosLink = "https://apps.apple.com/tr/app/npi-stanbul/id6473770767?l=tr"; 
+      if (userAgent.includes("android")) {
+        window.location.href = androidLink;
+      } else if (userAgent.includes("iphone") || userAgent.includes("ipad")) {
+        window.location.href = iosLink;
+      } else {
+       
+        document.body.innerHTML = "<p>Bu sayfa sadece mobil cihazlar içindir.</p>";
+      }
+    }
+  </script>
+</head>
+<body>
+  <p>Yönlendiriliyorsunuz...</p>
+</body>
+</html>
